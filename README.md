@@ -8,7 +8,7 @@ locally, but now you need to put them to the test by running them in a properly
 distributed fashion.
 
 For this, we will make use of AWS. Follow the
-[guides](https://github.com/UoB-CSA/setup-guides/aws) for setting
+[guides](https://github.com/UoB-CSA/setup-guides/blob/master/aws/create-instance.md) for setting
 up instances, accessing them, and opening required ports.
 
 In particular, you should:
@@ -52,10 +52,10 @@ verse-by-verse, in order.
 
 Here's how it should go:
 
-**Buddy 1**: "99 bottles of beer on the wall, 99 bottles of beer. Take one down, pass it around..."
-**Buddy 2**: "98 bottles of beer on the wall, 98 bottles of beer. Take one down, pass it around..."
-**Buddy 3**: "97 bottles of beer on the wall, 97 bottles of beer. Take one down, pass it around..."
-**Buddy 1**: "96 bottles of beer on the wall, 96 bottles of beer. Take one down, pass it around..."
++ **Buddy 1**: "99 bottles of beer on the wall, 99 bottles of beer. Take one down, pass it around..."
++ **Buddy 2**: "98 bottles of beer on the wall, 98 bottles of beer. Take one down, pass it around..."
++ **Buddy 3**: "97 bottles of beer on the wall, 97 bottles of beer. Take one down, pass it around..."
++ **Buddy 1**: "96 bottles of beer on the wall, 96 bottles of beer. Take one down, pass it around..."
 
 All the way down until there are no more bottles of beer on the wall, which the
 final singer should note appropriately with your preferred ending to the song.
@@ -64,7 +64,7 @@ Use 3 for testing, but your solution should be able to handle any number of
 buddies singing along. There should be no difference in the code, just different
 flags on the commandline.
 
-###Hints: 
+### Hints: 
 
 1. Each process needs to accept an `ip:port` string for the 'next' buddy who will
 follow on from them in the song. You'll have to configure them in a loop. 
