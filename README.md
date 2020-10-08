@@ -8,7 +8,7 @@ locally, but now you need to put them to the test by running them in a properly
 distributed fashion.
 
 For this, we will make use of AWS. Follow the
-[guides](https://github.com/UoB-CSA/setup-guides/blob/master/aws/create-instance.md) for setting
+[guides](https://github.com/UoB-CSA/setup-guides#using-aws) for setting
 up instances, accessing them, and opening required ports.
 
 In particular, you should:
@@ -72,4 +72,6 @@ follow on from them in the song. You'll have to configure them in a loop.
 won't have time to set the final process running so that the first can connect.
 3. When you set up the processes, you'll also need some way to indicate which of them 
 should start the song (I suggest allowing any `n` bottles of beer, for testing purposes). 
-4. You may need to look at `client.Go` rather than `client.Call`. 
+4. You may need to look at `client.Go` rather than `client.Call`.
+
+## Don't forget to stop any AWS instances!
