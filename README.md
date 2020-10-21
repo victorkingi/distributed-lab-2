@@ -7,19 +7,21 @@ system -- a chat client and server. Hopefully you've already tested these out
 locally, but now you need to put them to the test by running them in a properly
 distributed fashion.
 
-For this, we will make use of AWS. Follow the
-[guides](https://github.com/UoB-CSA/setup-guides#using-aws) for setting
+For this, we will make use of AWS. Follow the guides for setting
 up instances, accessing them, and opening required ports.
 
 In particular, you should:
 
-+ create two t2.micro instances
-+ make sure Go is installed on your instances
++ create two t2.micro instances, ([guide](https://github.com/UoB-CSA/setup-guides/blob/master/aws/create-instance.md))
++ make sure Go is installed on your instances ([guide](https://github.com/UoB-CSA/setup-guides/blob/master/go-install/aws.md#setup-instructions-for-aws-ubuntu-2004-lts-focal))
 + load your client/server code onto the instances (e.g., via git)
-+ start your server running on one instance
++ open ports to allow communication between instances ([guide](https://github.com/UoB-CSA/setup-guides/blob/master/aws/ports.md))
++ start your server running on one instance ([ssh guide](https://github.com/UoB-CSA/setup-guides/blob/master/aws/access-instance.md))
 + connect to your server with your client on another instance
 + connect to your server from your local machine
 + communicate between clients via your (genuinely) distributed system!
+
+**Make sure you stop your instances when you have finished!**
 
 
 ## 2: Using RPC - Secret Strings
