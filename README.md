@@ -1,6 +1,23 @@
-# RPC in GO
+# Distributed Lab 2: RPC in Go
 
-## 1: Deploying the Chat System
+## Using the lab sheet
+
+There are two ways to use the lab sheet, you can either:
+
+- [create a new repo from this template](https://github.com/UoB-CSA/distributed-lab-2/generate) - **this is the recommended way**
+- download a [zip file](https://github.com/UoB-CSA/distributed-lab-2/archive/master.zip)
+
+## Ratings
+
+Each question is rated to help you balance your work:
+
+- :red_circle::white_circle::white_circle::white_circle::white_circle: - Easy, strictly necessary.
+- :red_circle::red_circle::white_circle::white_circle::white_circle: - Medium, still necessary.
+- :red_circle::red_circle::red_circle::white_circle::white_circle: - Hard, necessary if you're aiming for higher marks.
+- :red_circle::red_circle::red_circle::red_circle::white_circle: - Hard, useful for coursework extensions.
+- :red_circle::red_circle::red_circle::red_circle::red_circle: - Hard, beyond what you need for any part of the coursework.
+
+## 1: Deploying the Chat System :red_circle::white_circle::white_circle::white_circle::white_circle:
 
 Following from the end of last week's lab, you should now have a distributed
 system -- a chat client and server. Hopefully you've already tested these out 
@@ -24,7 +41,7 @@ In particular, you should:
 **Make sure you stop your instances when you have finished!**
 
 
-## 2: Using RPC - Secret Strings
+## 2: Using RPC - Secret Strings :red_circle::white_circle::white_circle::white_circle::white_circle:
 
 Follow the video from this week to create a simple RPC system that allows
 clients to call the functions of a server via a defined interface. As with last
@@ -39,7 +56,7 @@ function in the server.
 + (Optional) run multiple server instances, and speed up the work by
 having your client split the load between servers.
 
-## 3: 99 Bottles of Beer
+## 3: 99 Bottles of Beer :red_circle::red_circle::red_circle::white_circle::white_circle:
 
 So far we've been focusing on client-server systems. However, there are times
 when we don't really want a distinction in roles between components -- when we
