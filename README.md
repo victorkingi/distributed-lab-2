@@ -31,7 +31,7 @@ In particular, you should:
 
 + create two t2.micro instances, ([guide](https://github.com/UoB-CSA/setup-guides/blob/master/aws/create-instance.md))
 + make sure Go is installed on your instances ([guide](https://github.com/UoB-CSA/setup-guides/blob/master/go-install/aws.md#setup-instructions-for-aws-ubuntu-2004-lts-focal))
-+ load your client/server code onto the instances (e.g., via git)
++ load your client/server code onto the instances (e.g., via [git](https://www.ole.bris.ac.uk/bbcswebdav/users/csxdb/pub/git/index.html))
 + open ports to allow communication between instances ([guide](https://github.com/UoB-CSA/setup-guides/blob/master/aws/ports.md))
 + start your server running on one instance ([ssh guide](https://github.com/UoB-CSA/setup-guides/blob/master/aws/access-instance.md))
 + connect to your server with your client on another instance
@@ -39,6 +39,14 @@ In particular, you should:
 + communicate between clients via your (genuinely) distributed system!
 
 **Make sure you stop your instances when you have finished!**
+
+### Frequently Asked Questions
+
+- **My code worked locally but it doesn't on AWS:** The main reason for this happening is incorrect IP addresses. To connect to the server from another AWS instance, you will need to use the private IP address. To connect to the server from a non-AWS computer (i.e. your personal computer) you need to use the public IP address. Think about why this may be the case, how do private and public IP addresses work?
+
+- **I use `go run client.go` and get `panic: runtime error: invalid memory address or nil pointer dereference`:** You are not passing in the IP address of the server to the client. Run it like this `go run client.go -ip ip:port` replacing `ip` and `port` with the appropriate values.
+
+- **What is git? How do I copy files with it?** [Git](https://www.ole.bris.ac.uk/bbcswebdav/users/csxdb/pub/git/index.html) is a version control system, it allows you to keep track of your changes. When we suggest loading files to AWS, we are suggesting that you should use a git repository and pushing your changes to the remote repository, then cloning/pulling these changes to your AWS instance. GitHub, GitLab and many others are services that allow for this process. Still stuck? You can try using [SCP](https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/) - we do not recommend this though. You should be familiar with git at this point.
 
 
 ## 2: Using RPC - Secret Strings :red_circle::white_circle::white_circle::white_circle::white_circle:
