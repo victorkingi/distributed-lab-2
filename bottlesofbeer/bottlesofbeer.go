@@ -42,7 +42,7 @@ func PassItAround(bottles int) {
 	nextround.Go("BottlesOfBeer.Round", reqs, resp, nil)
 }
 
-func (b *BottlesOfBeer) Round(inToken Token) (err error) {
+func (b *BottlesOfBeer) Round(inToken Token, outToken *Token) (err error) {
 	bottles := inToken.Bottles
 	Beers(bottles)
 
