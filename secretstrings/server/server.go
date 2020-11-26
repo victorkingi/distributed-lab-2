@@ -24,7 +24,12 @@ func ReverseString(s string, i int) string {
 type SecretStringOperations struct{}
 
 func (s *SecretStringOperations) Reverse(req stubs.Request, res *stubs.Response) (err error) {
-	res.Message = ReverseString(req.Message, 1)
+	res.Message = ReverseString(req.Message, 10)
+	return
+}
+
+func (s *SecretStringOperations) FastReverse(req stubs.Request, res *stubs.Response) (err error) {
+	res.Message = ReverseString(req.Message, 5)
 	return
 }
 

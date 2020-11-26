@@ -1,9 +1,11 @@
 package main
 
 import (
+	"bufio"
 	//	"net/rpc"
 	"flag"
 	"net/rpc"
+	"os"
 	"secretstrings/stubs"
 
 	//	"bufio"
@@ -20,9 +22,14 @@ func main() {
 	client, _ := rpc.Dial("tcp", *server)
 	defer client.Close()
 
-	request := stubs.Request{Message: "Hello"}
-	response := new(stubs.Response)
-	client.Call(stubs.ReverseHandler, request, response)
-	fmt.Println("Responded: " + response.Message)
+	f, _ := os.Open("wordlist")
+	scanner := bufio.NewScanner(f)
 
+	for scanner.Scan() {
+		line := scanner.Text()
+		request := stubs.Request{Message: line}
+		response := new(stubs.Response)
+		client.Call(stubs.PremiumReverseHandler, request, response)
+		fmt.Println("Responded: " + response.Message)
+	}
 }
