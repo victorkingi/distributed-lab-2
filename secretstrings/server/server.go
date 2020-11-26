@@ -29,7 +29,7 @@ func (s *SecretStringOperations) Reverse(req stubs.Request, res *stubs.Response)
 }
 
 func (s *SecretStringOperations) FastReverse(req stubs.Request, res *stubs.Response) (err error) {
-	res.Message = ReverseString(req.Message, 5)
+	res.Message = ReverseString(req.Message, 1)
 	return
 }
 
